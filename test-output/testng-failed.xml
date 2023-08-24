@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="testCases.RegisterTestCases">
+        <methods>
+          <include name="registerWithExistedAccountTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14"/>
+          <include name="newsLetterSubscribeTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="validAccountTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14"/>
+          <include name="passMinimumLengthTest" invocation-numbers="0 1 2 3"/>
+          <include name="TrailingLeadingTest" invocation-numbers="0 1 2 3 4 5 6 7 8"/>
+          <include name="subcribeDefaultTest"/>
+          <include name="invalidFormatEmailTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="invalidConpassTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14"/>
+          <include name="TrailingLeadingNameTest" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="emptyFields" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="setup"/>
+          <include name="passMinimumCharacterTypeTest" invocation-numbers="0 1 2 3 4 5 6 7 8"/>
+        </methods>
+      </class> <!-- testCases.RegisterTestCases -->
+      <class name="testCases.ShoppingCartTest">
+        <methods>
+          <include name="testDeleteItems"/>
+          <include name="editItemTest" invocation-numbers="0"/>
+          <include name="editQuantityTest" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.ShoppingCartTest -->
+      <class name="testCases.AddToCartTest">
+        <methods>
+          <include name="testSizeNotSelectedFromProductPage"/>
+          <include name="testColorNotSelectedFromProductPage"/>
+          <include name="testQuantityFromProductPage" invocation-numbers="0 1 2 3"/>
+          <include name="testNoOptionSelectedFromProductPage"/>
+          <include name="testAddToCartFromHomePage"/>
+          <include name="testDefaultQuantity"/>
+          <include name="testColorNotSelectedFromHomePage"/>
+          <include name="testNoOptionSelectedFromHomePage"/>
+          <include name="testSizeNotSelectedFromHomePage"/>
+          <include name="testAddToCartFromPoductPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.AddToCartTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
